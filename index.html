@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="scripts/data.js"></script>
+   	<script defer src="scripts/showProduct.js"></script>
+		<link rel="stylesheet" href="styles/mainDesign.css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+				rel="stylesheet">
+		<title>Gurmanska Oaza</title>
+	</head>
+		<body>
+		<div class="parent">
+			<div class="logo"> 
+				<img src="images/logo.png">
+			</div>
+			<div class="otvorenaKategorija"> 
+				<p class="txt">Trenutačno nije otvorena ni jedna kategorija!</p>
+			</div>
+			<div class="kosarica"> 
+				<a href="cart.html">
+					<img class="ikonaZaKosaricu" src="images/shopping-cart.png">
+				</a>
+					<span class="cart-count">0</span>
+				<img class="ikonaZaSearch" src="images/searchicon.png">
+			</div>
+			<div class="kategorije"> 
+				<p class="txt" onclick="showProducts('Meso')">Meso</p>
+				<p class="txt" onclick="showProducts('Slatkiši')">Slatkiši</p>
+				<p class="txt" onclick="showProducts('Riba')">Riba</p>
+				<p class="txt" onclick="showProducts('Voće')">Voće</p>
+				<p class="txt" onclick="showProducts('Povrće')">Povrće</p>
+				<p class="txt" onclick="showProducts('Orašasti plodovi')">Orašasti plodovi</p>
+				<p class="txt" onclick="showProducts('Kruh i peciva')">Kruh i peciva</p>
+				<p class="txt" onclick="showProducts('Mliječni proizvodi')">Mliječni proizvodi</p>
+				<p class="txt" onclick="showProducts('Smrznuta hrana')">Smrznuta hrana</p>
+				<p class="txt" onclick="showProducts('Žitarice')">Žitarice</p>
+			</div>
+			<div class="kontakt"> 
+				<p class="txt">Kontakt</p>
+				<p class="txt">Newsletter</p>
+				<p class="txt">Pretplati se</p>
+			</div>
+			<div class="pozdravnaSlika"> 
+				<img src="images/pozdravnaslika.jpg">
+				<div class="pozdravniTekst">
+					<h1>Dobrodošli na našu stranicu!</h1>
+				</div>
+			</div>
+			<div class="proizvodi"> </div>
+			</div>
+	</body>
+</html>
