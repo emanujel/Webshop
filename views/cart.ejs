@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="styles/cartDesign.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Gurmanska Oaza</title>
+	</head>
+	<body>
+		<div class="parent">
+			<%- include('partials/header_cart') %>
+			<div class="kosarica">
+				<p class="txt">KOŠARICA</p>
+				<table id="cartItems">
+					<thead>
+						<tr>
+							<th class="imena">NAZIV PROIZVODA</th>
+							<th class="imena">KOLIČINA</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% cart.forEach(item => { %>
+						<tr>
+							<td><%= item.name %></td>
+							<td>
+								<button
+									class="add-btn"
+									onclick="addToCart('<%= item.name %>')"
+								>
+									+
+								</button>
+								<%= item.quantity %>
+								<button
+									class="remove-btn"
+									onclick="removeFromCart('<%= item.name %>')"
+								>
+									-
+								</button>
+							</td>
+						</tr>
+						<% }); %>
+					</tbody>
+				</table>
+				<% if (cart.length === 0) { %>
+				<p class="txt2">Košarica je prazna</p>
+				<% } %>
+				<a href="/" class="txt2">Natrag na proizvode</a>
+			</div>
+		</div>
+		<%- include('partials/footer') %>
+		<script src="/scripts/cart.js"></script>
+	</body>
+</html>

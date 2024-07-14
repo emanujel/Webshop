@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="styles/mainDesign.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Gurmanska Oaza</title>
+	</head>
+	<body>
+		<div class="parent">
+			<%- include('partials/header_main') %>
+			<div class="kategorije">
+				<% categories.forEach(category => { %>
+				<p class="txt" onclick="showProducts('<%= category.name %>')">
+					<%= category.name %>
+				</p>
+				<% }); %>
+			</div>
+			<div class="kontakt">
+				<p class="txt">Kontakt</p>
+				<p class="txt">Newsletter</p>
+				<p class="txt">Pretplati se</p>
+			</div>
+			<div class="pozdravnaSlika">
+				<img src="images/pozdravnaslika.jpg" />
+				<div class="pozdravniTekst">
+					<h1>Dobrodošli na našu stranicu!</h1>
+				</div>
+			</div>
+			<div class="proizvodi"></div>
+			<%- include('partials/footer') %>
+		</div>
+		<script src="/scripts/home.js"></script>
+	</body>
+</html>
